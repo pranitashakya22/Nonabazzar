@@ -134,9 +134,27 @@ const ProdDeets = () => {
 
       <h4 className="sectionTitle mt-4">Customer Reviews</h4>
       <div className="reviewSection">
-        <p className="noReviewsText">
+        <div className="userDeets d-flex">            
+            <img src={image} className="w-25"/>
+            <p className="text-align-center ml-4">Pranita Shakya</p>
+        
+          <Rating
+             name="read-only"
+             value={5}
+             precision={0.5}
+             size="small"
+             readOnly
+            />
+    
+            <p>
+              The product was shipped in an excellent condition. I highly recommend you guys to try this tea. This tea has become my goto drink every morning. Thank you Nonabozzar. Would love to shop again.
+            </p>
+        </div>
+        
+
+        {/* <p className="noReviewsText">
           No reviews yet. <span className="highlight">Be the first to write a review!</span>
-        </p>
+        </p> */}
       </div>
      </div>
       )}
