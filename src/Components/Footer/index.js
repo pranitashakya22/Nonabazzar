@@ -12,8 +12,7 @@ const Footer = () =>{
                        <ul>
                        <li><Link to="#">Large Cardamom</Link></li>
                        <li><Link to="#">Ginger</Link></li>
-                       <li><Link to="#">Tea</Link></li>
-                       <li><Link to="#">Coffee</Link></li>
+                       <li><Link to="#">Tea/Coffee</Link></li>
                        <li><Link to="#">Vegetable and Vegetable Seeds
                        </Link></li>
                        <li><Link to="#">Fruit and Juices
@@ -29,38 +28,23 @@ const Footer = () =>{
                         <h5>Textiles & Garments
                         </h5>
                        <ul>
-                       <li><Link to="#">Large Cardamom</Link></li>
-                       <li><Link to="#">Ginger</Link></li>
-                       <li><Link to="#">Tea</Link></li>
-                       <li><Link to="#">Coffee</Link></li>
-                       <li><Link to="#">Vegetable and Vegetable Seeds
-                       </Link></li>
-                       <li><Link to="#">Fruit and Juices
-                       </Link></li>
-                       <li><Link to="#">Honey</Link></li>
-                       <li><Link to="#">Lentils</Link></li>
-                       <li><Link to="#">Instant Noodles</Link></li>
-                       <li><Link to="#">Himalayan Dog Chew (Chhurpi)
-                       </Link></li>
+                       <li><Link to="#">Woolen Shawls</Link></li>
+                       <li><Link to="#">Handmade Rugs</Link></li>
+                       <li><Link to="#">Traditional Dresses</Link></li>
+                       <li><Link to="#">Scarves</Link></li>
+                       <li><Link to="#">Embroidered Fabrics</Link></li>
+                       
                        </ul>
                     </div>
                     <div className="col">
-                        <h5>Handicrafts & Decorative Items
+                        <h5>Handicrafts/Decorative Items
                         </h5>
                        <ul>
-                       <li><Link to="#">Large Cardamom</Link></li>
-                       <li><Link to="#">Ginger</Link></li>
-                       <li><Link to="#">Tea</Link></li>
-                       <li><Link to="#">Coffee</Link></li>
-                       <li><Link to="#">Vegetable and Vegetable Seeds
-                       </Link></li>
-                       <li><Link to="#">Fruit and Juices
-                       </Link></li>
-                       <li><Link to="#">Honey</Link></li>
-                       <li><Link to="#">Lentils</Link></li>
-                       <li><Link to="#">Instant Noodles</Link></li>
-                       <li><Link to="#">Himalayan Dog Chew (Chhurpi)
-                       </Link></li>
+                       <li><Link to="#">Wooden Carvings</Link></li>
+                       <li><Link to="#">Metal Statues</Link></li>
+                       <li><Link to="#">Handmade Jewelry</Link></li>
+                       <li><Link to="#">Decorative Lamps</Link></li>
+                       <li><Link to="#">Thangka Paintings</Link></li>
                        </ul>
                     </div>
                     <div className="col">

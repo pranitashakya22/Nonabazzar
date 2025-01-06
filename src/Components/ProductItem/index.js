@@ -32,7 +32,7 @@ const ProductItem = (props) =>{
                       <Rating className="mt-2 mb-2" name="read-only" value={5} readOnly size="small" precision={0.5}/>
 
                       <div className="d-flex">
-                        <span className="oldPrice">$20.00</span>
+                        <span className="oldPrice">$17.00</span>
                         <span className="netPrice text-danger">$14.00</span>
                       </div>
                       </div>
