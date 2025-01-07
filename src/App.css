@@ -272,4 +272,11 @@ footer .copyright ul li a:hover svg{color: #fff !important;}
 .customTabs ul li{background-color: rgb(229 229 229);     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem; padding-left: .5rem;  padding-right: .5rem;}
 .customTabs ul li button{padding: 6px 25px !important; border: 1px solid rgba(0, 0, 0, 0.2) !important; font-size: 15px !important; text-transform: capitalize !important; border-radius: 30px !important; color: #000 !important;}
+
 .customTabs ul li button.active{background-color: #1163b4 !important;}
+
+
+.cartPage .table thead{background: #ececec !important; overflow: hidden;}
+.cartPage .table thead th{border: 0 !important;}
+.cartPage .table thead th:first-child{border-top-left-radius: 10px !important; border-bottom-left-radius: 10px !important;}
+.cartPage .table thead th:last-child{border-top-right-radius: 10px !important; border-bottom-right-radius: 10px !important;}

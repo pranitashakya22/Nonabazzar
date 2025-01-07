@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 import ProductModel from "./Components/ProductModel";
 import Listing from "./Pages/ListingPage";
 import ProdDeets from "./Pages/ProdDeets/proddeets";
+import Cart from "./Pages/Cart";
 
 const MyContext = createContext();
 
@@ -44,6 +45,7 @@ function App() {
       <Route path="/" exact={true} element={<Home/>}/>
       <Route path="/cat/:id" exact={true} element={<Listing/>}/>
       <Route exact={true} path="/product/:id" element={<ProdDeets />}/>
+      <Route exact={true} path="/cart" element={<Cart />}/>
     </Routes>
     <Footer/>
     {
