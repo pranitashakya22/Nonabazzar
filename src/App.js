@@ -21,6 +21,7 @@ function App() {
   const [selectedCountry, setselectedCountry] = useState('');
   const [isOpenProdModel, setisOpenProdModel] = useState(false);
   const [isHeaderFooterShow, setisHeaderFooterShow] = useState(true);
+  const [isLogin, setisLogin] = useState(false);
 
   useEffect(()=>{
     getCountry("https://countriesnow.space/api/v0.1/countries")
@@ -40,7 +41,9 @@ function App() {
     isOpenProdModel,
     setisOpenProdModel,
     isHeaderFooterShow,
-    setisHeaderFooterShow
+    setisHeaderFooterShow,
+    isLogin,
+    setisLogin
   }
   return (
     <BrowserRouter>

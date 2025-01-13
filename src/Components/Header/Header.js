@@ -29,7 +29,12 @@ const Header =()=>{
                       }
                      <NavbarSearch/>
                     <div className='part3 d-flex align-items-center ml-auto'>
-                        <Button className='userProfile mr-3'><FiUser /></Button>
+
+                        {
+                            context.isLogin !== true ? <Link to="/signIn"> <Button className='btn-blue btn-round mr-3'>Sign In</Button></Link>:
+                            <Button className='userProfile mr-3'><FiUser /></Button> 
+                        }
+
                         <div className='cart ml-auto d-flex align-items-center'>
                             <span className='price'>$3.29</span>
                             <div className='position-relative ml-2'>
