@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv/config'); // Loads .env file into process.env
+app.use(express.json());
 
 app.use(cors());
 app.options('*', cors());
@@ -11,8 +12,13 @@ app.options('*', cors());
 // Middleware
 app.use(bodyParser.json());
 
+//Routes
+const categoryRoutes = require('./routes/category');
+
+app.use(`/api/category`, categoryRoutes);
+
 // MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(process.env.CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -20,9 +26,8 @@ mongoose.connect(process.env.MONGO_URI, {
     console.log('Database Connection is ready....');
 
     // Server
-    const port = process.env.PORT || 4000; // Default to 4000 if PORT is not defined
-    app.listen(port, () => {
-        console.log(`Server is running at http://localhost:${port}`);
+    app.listen(process.env.PORT, () => {
+        console.log(`Server is running at http://localhost:${process.env.PORT}`);
     });
 })
 .catch((err) => {
