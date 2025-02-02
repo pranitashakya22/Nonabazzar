@@ -38,8 +38,9 @@ const Header =()=>{
                         <div className='cart ml-auto d-flex align-items-center'>
                             <span className='price'>$3.29</span>
                             <div className='position-relative ml-2'>
+                            <Link to = "/cart">
                             <Button className='userProfile'><BsCart3 /></Button>
-                            <span className='count d-flex align-items-center justify-content-center'>1</span>
+                            <span className='count d-flex align-items-center justify-content-center'>1</span> </Link>
                             </div>
                         </div>
                     </div>

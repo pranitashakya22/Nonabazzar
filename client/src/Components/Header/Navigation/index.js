@@ -35,11 +35,9 @@ const Navigation =()=>{
                  <div className='col-am-10 navPart2 d-flex align-items-center'>
                     <ul className='list list-inline ml-auto'>
                     <li className='list-inline-item'><Link to="/"><Button>Home</Button></Link></li>
-                    <li className='list-inline-item'><Link to="/"><Button>Food</Button></Link></li>
-                    <li className='list-inline-item'><Link to="/"><Button>Jewelleries</Button></Link></li>
-                    <li className='list-inline-item'><Link to="/"><Button>Decoratives</Button></Link></li>
-                    <li className='list-inline-item'><Link to="/"><Button>Handmade Products</Button></Link></li>
-                    <li className='list-inline-item'><Link to="/"><Button>Contact Us</Button></Link></li>
+                    <li className='list-inline-item'><Link to="/cat/:id"><Button>Shop</Button></Link></li>
+                    <li className='list-inline-item'><Link to="/aboutus"><Button>About Us</Button></Link></li>
+                    <li className='list-inline-item'><Link to="/contact"><Button>Contact Us</Button></Link></li>
                     </ul>
                  </div>                
               </div>

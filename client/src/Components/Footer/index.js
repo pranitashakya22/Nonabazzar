@@ -90,10 +90,10 @@ const Footer = () =>{
                     <p className="mb-0">Copyright 2024. All rights reserved.</p>
                     <ul className="list list-inline ml-auto mb-0 socials">
                         <li className="list-inline-item">
-                            <Link to="#"><FaFacebookF/></Link>
+                            <Link to="https://www.facebook.com/Nonabazzarnepal"><FaFacebookF/></Link>
                         </li>
                         <li className="list-inline-item">
-                            <Link to="#"><FaInstagram/></Link>
+                            <Link to="https://www.instagram.com/nona_bazzar/"><FaInstagram/></Link>
                         </li>
                     </ul>
                 </div>

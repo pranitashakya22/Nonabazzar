@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import { IoMdHeartEmpty } from 'react-icons/io';
 import { useContext, useState } from 'react';
 import { MyContext } from '../../App';
+import { Link } from 'react-router-dom';
 
 
 const ProductItem = (props) =>{
@@ -17,15 +18,20 @@ const ProductItem = (props) =>{
     return(
       <>
         <div className={`productItem ${props.itemView}`}>
+                   
                       <div className="imgWrapper">
-                         <img src={Tea} alt="tea" className="w-100"/>
+                      <Link to = "/product/1">
+                         <img src={Tea} alt="tea" className="w-100"/></Link>
 
                          <span className="badge badge-primary">20%</span>
+                        
                          <div className="actions">
                           <Button onClick={()=>viewProductDeets(1)}><TfiFullscreen/></Button>
                           <Button><IoMdHeartEmpty style={{fontSize:'20px'}}/></Button>
                          </div>
+                         
                       </div>
+                      
                       <div className="info">
                       <h4>Nepali Premium Organic Tea</h4>
                       <span className="text-success d-block">In Stock</span>

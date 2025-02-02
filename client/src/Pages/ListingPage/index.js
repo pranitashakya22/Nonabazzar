@@ -67,6 +67,24 @@ const Listing = ()=>{
                             <ProductItem itemView={prodView}/>
                             <ProductItem itemView={prodView}/>
                             <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
+                            <ProductItem itemView={prodView}/>
                         </div>
 
                         <div className="d-flex mt-5 align-items-center justify-content-center">

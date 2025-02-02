@@ -324,3 +324,193 @@ a:hover{text-decoration: none;}
 .signUpPage{height: auto;}
 .signUpPage .box{width: 500px; height: auto;}
 .signUpPage .box img{margin-left: 50px;}
+
+
+/* Contact Page */
+.contact-container {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-container p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.contact-info .row{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.contact-info .info-item {
+    text-align: center;
+    flex: 1;
+}
+
+.contact-info h3 {
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.contact-info p {
+    color: #666;
+    font-size: 14px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .contact-info {
+        flex-direction: column;
+    }
+}
+
+/* About Us */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero_about{
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #355b81;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.hero_about h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.hero_about p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.mission p, .values p {
+    line-height: 1.6;
+}
+
+.values-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.value-item {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-members {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    flex: 1 1 calc(25% - 20px); 
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #355b81;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact .btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .values-list {
+        flex-direction: column;
+    }
+
+    .team-members {
+        flex-direction: column;
+    }
+}

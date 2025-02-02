@@ -12,6 +12,9 @@ import ProdDeets from "./Pages/ProdDeets/proddeets";
 import Cart from "./Pages/Cart";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
+import ContactUs from "./Pages/ContactUs";
+import AboutUs from "./Pages/AboutUs";
+import Shop from "./Pages/shop";
 
 const MyContext = createContext();
 
@@ -59,6 +62,9 @@ function App() {
       <Route exact={true} path="/cart" element={<Cart />}/>
       <Route exact={true} path="/signIn" element={<SignIn />}/>
       <Route exact={true} path="/signUp" element={<SignUp />}/>
+      <Route exact={true} path="/contact" element={<ContactUs />}/>
+      <Route exact={true} path="/aboutus" element={<AboutUs />}/>
+      <Route exact={true} path="/shop" element={<Shop />}/>
     </Routes>
     {
         isHeaderFooterShow === true && <Footer/>
