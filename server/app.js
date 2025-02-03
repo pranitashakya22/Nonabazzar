@@ -13,9 +13,11 @@ app.options('*', cors());
 app.use(bodyParser.json());
 
 //Routes
-const categoryRoutes = require('./routes/category');
+const categoryRoutes = require('./routes/categories');
+const productRoutes = require('./routes/products');
 
 app.use(`/api/category`, categoryRoutes);
+app.use(`/api/products`, productRoutes);
 
 // MongoDB Connection
 mongoose.connect(process.env.CONNECTION_STRING, {

@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 require('dotenv').config();
 
-const cloudinary = require('cloudinary');
+const cloudinary = require('cloudinary').v2;
 const pLimit = require('p-limit');
 
 
@@ -11,6 +11,7 @@ cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
     api_key: process.env.CLOUDINARY_API_KEY,
     api_secret: process.env.CLOUDINARY_API_SECRET,
+    secure: true,
 });
 
 router.get(`/`, async (req, res) => {
@@ -29,7 +30,7 @@ router.get('/:id', async (req, res) => {
         res.status(500).json({ message: 'The category with the given ID was not found.' })
     }
     return res.status(200).send(category);
-})
+});
 
 router.delete('/:id', async (req, res) => {
     const deletedUser = await Category.findByIdAndDelete(req.params.id);
@@ -43,48 +44,45 @@ router.delete('/:id', async (req, res) => {
     })
 });
 
-router.post('/create', async (req, res)=>{
-    const limit = pLimit(2);
+router.post('/create', async (req, res) => {
+    try {
+        const limit = pLimit(2);
 
-    const imagesToUpload = req.body.images.map((image) => { 
-        // Process each image
-            return limit(async ()=>{
-            const result = await cloudinary.uploader.upload(image);
-            return result;
-        })
-    });
+        const imagesToUpload = req.body.images.map((image) => { 
+            return limit(async () => {
+                const result = await cloudinary.uploader.upload(image);
+                return result;
+            })
+        });
 
+        const uploadStatus = await Promise.all(imagesToUpload);
+        const imgurl = uploadStatus.map((item) => item.secure_url);
 
-   const uploadStatus = await Promise.all(imagesToUpload);
+        if (!uploadStatus || imgurl.length === 0) {
+            return res.status(500).json({
+                error: "Images cannot be uploaded!",
+                status: false
+            });
+        }
 
-   const imgurl = uploadStatus.map((item) => {
-    return item.secure_url
-   })
+        let category = new Category({
+            name: req.body.name,
+            images: imgurl,
+            color: req.body.color
+        });
 
-   if(!uploadStatus){
-    return res.status(500).json({
-        error:"images cannot be upload!",
-        status:false
-    })
-   }
+        category = await category.save();
 
-   let category = new Category({
-    name:req.body.name,
-    images:imgurl,
-    color:req.body.color
-   });
-
-  if(!category){
-    res.status(500).json({
-        error:err,
-        success:false
-    })
-  }  
-
-  category = await category.save();
-
-   res.status(201).json(category);
+        res.status(201).json(category);
+    } catch (error) {
+        console.error("Error in POST /create:", error);
+        res.status(500).json({
+            error: "Internal server error",
+            details: error.message
+        });
+    }
 });
+
 
 
 
@@ -125,7 +123,10 @@ if(!uploadStatus){
             success:false
         })
     }
-    res.send(category);
+    res.status(200).json({
+        message:'the categort is updated',
+        status:true
+    });
 })
 
 module.exports = router;
